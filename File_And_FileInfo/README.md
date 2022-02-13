@@ -21,7 +21,7 @@ Utilizando a classe File para manipular arquivos.
 
 <h2 id=installation>☑️ Instalação</h2>
 
-Basta clonar o repositório e consultar os desafios.
+Basta clonar o repositório e consultar o código.
 
 <h2 id=technology>🧰 Tecnologias</h2>
 Utilizamos algumas tecnologias:
