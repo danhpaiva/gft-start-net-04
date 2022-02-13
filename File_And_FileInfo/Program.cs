@@ -2,17 +2,22 @@
 
 WriteLine("Digite o nome do arquivo: ");
 var nameFile = ReadLine();
-
-foreach (var itemInvalid in Path.GetInvalidFileNameChars())
-{
-  nameFile = nameFile.Replace(itemInvalid, '-');
-}
+nameFile = SanitizarNomeArquivo(nameFile);
 
 var path = Path.Combine(Environment.CurrentDirectory, $"{nameFile}.txt");
 CriarArquivo(path);
 
-WriteLine("Pressione alguma tecla para finalizar...");
+WriteLine("Pressione ENTER para finalizar...");
 ReadLine();
+
+static string SanitizarNomeArquivo(string nameFile)
+{
+  foreach (var itemInvalid in Path.GetInvalidFileNameChars())
+  {
+    nameFile = nameFile.Replace(itemInvalid, '-');
+  }
+  return nameFile;
+}
 
 static void CriarArquivo(string path)
 {
