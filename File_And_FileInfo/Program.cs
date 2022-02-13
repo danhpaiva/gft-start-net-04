@@ -1,8 +1,14 @@
 ﻿using static System.Console;
 
 WriteLine("Digite o nome do arquivo: ");
-var nomeArquivo = ReadLine();
-var path = Path.Combine(Environment.CurrentDirectory, $"{nomeArquivo}.txt");
+var nameFile = ReadLine();
+
+foreach (var itemInvalid in Path.GetInvalidFileNameChars())
+{
+  nameFile = nameFile.Replace(itemInvalid, '-');
+}
+
+var path = Path.Combine(Environment.CurrentDirectory, $"{nameFile}.txt");
 CriarArquivo(path);
 
 WriteLine("Pressione alguma tecla para finalizar...");
