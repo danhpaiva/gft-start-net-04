@@ -1,3 +1,0 @@
-Esta é a linha 01 do arquivo.
-Esta é a linha 02 do arquivo.
-Esta é a linha 03 do arquivo.
