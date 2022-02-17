@@ -30,10 +30,12 @@ Deixar aqui os respectivos códigos para consultas futuras.
 Basta clonar o repositório e consultar os desafios.
 
 <h2 id=technology>🧰 Tecnologias</h2>
-Utilizamos algumas tecnologias:
+
+Tecnologias utilizadas no projeto:
 
 - GIT: <a href="https://git-scm.com/downloads">Setup</a>
 - Visual Studio Code: <a href="https://code.visualstudio.com/download">Visual Studio Code</a>
+- SDK: <a href="https://dotnet.microsoft.com/en-us/download/dotnet/6.0">.Net 6</a>
   
 <h2 id=author>😄 Autor</h2>
 Desenvolvido por <a href="https://www.linkedin.com/in/danhpaiva/">Daniel Paiva</a>
