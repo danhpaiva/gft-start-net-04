@@ -1,8 +1,11 @@
 ﻿using static System.Console;
 
-var path = @"D:\work\gft-start-net-04\Directory_And_DirectoryInfo\globos";
+var path = @"D:\work\gft-start-net-04\Directory_And_DirectoryInfo\globo";
 LerDiretorios(path);
 ReadKey();
+Clear();
+LerArquivos(path);
+ReadLine();
 
 static void LerDiretorios(string path)
 {
@@ -23,5 +26,20 @@ static void LerDiretorios(string path)
   else
   {
     WriteLine($"Diretório {path} não existe");
+  }
+}
+
+static void LerArquivos(string path)
+{
+  var files = Directory.GetFiles(path, "*", SearchOption.AllDirectories);
+  foreach (var f in files)
+  {
+    var fileInfo = new FileInfo(f);
+    WriteLine($"Nome: {fileInfo.Name}");
+    WriteLine($"Tamanho: {fileInfo.Length}");
+    WriteLine($"Último Acesso: {fileInfo.LastAccessTime}");
+    WriteLine($"Pasta: {fileInfo.DirectoryName}");
+
+    WriteLine();
   }
 }
