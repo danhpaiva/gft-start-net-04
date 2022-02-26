@@ -6,9 +6,9 @@ stringBuilder.AppendLine("Texto na primeira linha a ser lido...");
 stringBuilder.AppendLine("Texto na segunda linha a ser lido...");
 stringBuilder.AppendLine("Texto na terceira linha a ser lido...");
 
-using var stringReader = new StringReader(stringBuilder.ToString());
-var buffer = new char[10];
-var tamanho = 0;
+using StringReader stringReader = new StringReader(stringBuilder.ToString());
+char[] buffer = new char[10];
+int tamanho = 0;
 
 LerArquivosPequenos(buffer, tamanho, stringReader);
 
