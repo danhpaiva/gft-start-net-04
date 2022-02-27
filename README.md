@@ -36,7 +36,7 @@ Tecnologias utilizadas no projeto:
 - GIT: <a href="https://git-scm.com/downloads">Setup</a>
 - Visual Studio Code: <a href="https://code.visualstudio.com/download">Visual Studio Code</a>
 - SDK: <a href="https://dotnet.microsoft.com/en-us/download/dotnet/6.0">.Net 6</a>
-- Nuget.Org: <a href="https://www.nuget.org/">Acess Site</a>
+- nuget.org: <a href="https://www.nuget.org/">Acess site</a>
   
 <h2 id=author>😄 Autor</h2>
 Desenvolvido por <a href="https://www.linkedin.com/in/danhpaiva/">Daniel Paiva</a>
