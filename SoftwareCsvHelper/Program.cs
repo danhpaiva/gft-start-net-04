@@ -6,7 +6,55 @@ using static System.Console;
 // dotnet add package CsvHelper --version 27.2.1
 //LerArquivoCsvComDynamic();
 //LerCsvComClasse();
-LerArquivoCsvComOutroDelimitador();
+//LerArquivoCsvComOutroDelimitador();
+
+EscreverEmCsv();
+
+static void EscreverEmCsv()
+{
+  var path = Path.Combine(Environment.CurrentDirectory, "Saida");
+
+  var diretorioInfo = new DirectoryInfo(path);
+  if (!diretorioInfo.Exists) diretorioInfo.Create();
+
+  path = Path.Combine(path, "usuarios.csv");
+
+  var pessoas = new List<Pessoa>()
+    {
+        new Pessoa()
+        {
+            Nome = "José da Silva",
+            Email = "js@gmail.com",
+            Telefone = 123456,
+        },
+        new Pessoa()
+        {
+            Nome = "Pedro Paiva",
+            Email = "pp@gmail.com",
+            Telefone = 456789,
+        },
+        new Pessoa()
+        {
+            Nome = "Maria Antonia",
+            Email = "ma@gmail.com",
+            Telefone = 123456,
+        },
+        new Pessoa()
+        {
+            Nome = "Carla Moraes",
+            Email = "cms@gmail.com",
+            Telefone = 9987411,
+
+        },
+    };
+  using var sr = new StreamWriter(path);
+  var csvConfig = new CsvConfiguration(CultureInfo.InvariantCulture)
+  {
+    Delimiter = "|"
+  };
+  using var csvWriter = new CsvWriter(sr, csvConfig);
+  csvWriter.WriteRecords(pessoas);
+}
 
 static void LerArquivoCsvComOutroDelimitador()
 {
