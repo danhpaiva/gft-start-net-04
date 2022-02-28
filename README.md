@@ -17,17 +17,26 @@
  <a href="#licence">Licença</a>
 </p>
 
+<p align="center">
+  <a href="#">
+    <img src="src\bootcamp_gft_start_net_4.png" width="500" alt="DIO">
+  </a>
+</p>
+
 <h2 align="center" id=status> 
-	✔️ Em progresso ✔️
+	✔️ Concluído ✔️
 </h2>
 
 <h2 id=objective>📜 Objetivo</h2>
 
+O Bootcamp GFT Start #4 .NET foi pensado exclusivamente para o desenvolvimento em .NET,<br>
+contendo uma sequência completa de cursos, mentorias e desafios.<br>
 Deixar aqui os respectivos códigos para consultas futuras.
 
 <h2 id=installation>☑️ Instalação</h2>
 
-Basta clonar o repositório e consultar os desafios.
+Basta clonar o repositório e consultar os desafios e códigos feitos<br>
+durante o bootcamp.
 
 <h2 id=technology>🧰 Tecnologias</h2>
 
