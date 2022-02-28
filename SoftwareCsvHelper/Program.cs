@@ -24,7 +24,7 @@ static void LerArquivoCsvComOutroDelimitador()
   };
 
   using var csvReader = new CsvReader(streamReader, csvConfig);
-
+  csvReader.Context.RegisterClassMap<LivroMap>();
   var registros = csvReader.GetRecords<Book>();
 
   foreach (var registro in registros)
