@@ -1,14 +1,14 @@
 using CsvHelper.Configuration.Attributes;
 public class Book
 {
-  [Name("titulo")]
+  [Index(0)]
   public string Titulo { get; set; }
-  [Name("autor")]
+  [Index(2)]
   public string Autor { get; set; }
-  [Name("preço")]
+  [Index(1)]
   [CultureInfo("pt-br")]
   public decimal Preco { get; set; }
-  [Name("lançamento")]
+  [Index(3)]
   [Format("dd/MM/yyyy")]
   public DateOnly Lancamento { get; set; }
 }
