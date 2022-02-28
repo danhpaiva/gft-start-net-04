@@ -5,7 +5,37 @@ using static System.Console;
 
 // dotnet add package CsvHelper --version 27.2.1
 //LerArquivoCsvComDynamic();
-LerCsvComClasse();
+//LerCsvComClasse();
+LerArquivoCsvComOutroDelimitador();
+
+static void LerArquivoCsvComOutroDelimitador()
+{
+  var path = Path.Combine(Environment.CurrentDirectory, "Entrada", "livros.csv");
+
+  var fileInfo = new FileInfo(path);
+
+  if (!fileInfo.Exists)
+    throw new FileNotFoundException($"O arquivo {path} não existe.");
+
+  using var streamReader = new StreamReader(fileInfo.FullName);
+  var csvConfig = new CsvConfiguration(CultureInfo.InvariantCulture)
+  {
+    Delimiter = ";"
+  };
+
+  using var csvReader = new CsvReader(streamReader, csvConfig);
+
+  var registros = csvReader.GetRecords<Book>();
+
+  foreach (var registro in registros)
+  {
+    WriteLine($"Titulo:{registro.Titulo}");
+    WriteLine($"Preço:{registro.Preco}");
+    WriteLine($"Autor:{registro.Autor}");
+    WriteLine($"Lançamento:{registro.Lancamento}");
+    WriteLine();
+  }
+}
 
 static void LerCsvComClasse()
 {
