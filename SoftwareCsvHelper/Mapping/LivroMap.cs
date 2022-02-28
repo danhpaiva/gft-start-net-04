@@ -4,7 +4,7 @@ public class LivroMap : ClassMap<Book>
 {
   public LivroMap()
   {
-    Map(x => x.Autor).Name("titulo");
+    Map(x => x.Titulo).Name("titulo");
     Map(x => x.Preco)
     .Name("preço")
     .TypeConverterOption.CultureInfo(CultureInfo.GetCultureInfo("pt-br"));
